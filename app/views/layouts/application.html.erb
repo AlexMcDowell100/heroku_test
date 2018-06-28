@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+  </head>
+
+  <body>
+
+
+<div id="simpleModal" class="modal">
+<div class="modal-content">
+<div class="modal-header"><div id='noentry'>
+      <p> you are not old enough soz x</p>
+    </div></div>
+    
+    <div id="modal-body">
+    
+      <form>
+      Date Of Birth <input type="text" id="DOB" /></br>
+      </form>
+      <div id="acceptBtn" class="btn dark">Submit</div>
+      </div>
+      </div>
+      
+        </div>
+    </div>
+    
+    <div id='container_nav'>
+      <div>
+        <p> Menu </p>
+      </div>
+      <div>
+      </div>
+      <div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+<% else %>
+ <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to('Login', new_user_session_path)  %>  
+<% end %>
+</div>
+
+</div>
+
+
+    <%= yield %>
+  </body>
+</html>

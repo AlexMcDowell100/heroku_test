@@ -1,0 +1,2 @@
+class AgeVerification < ApplicationRecord
+end

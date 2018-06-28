@@ -1,0 +1,232 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+a{
+    text-decoration-line: none;
+    color: white;
+}
+
+body{
+  color:white;
+}
+
+#container_nav{
+height:40px;
+display: grid;
+grid-template-columns: 1fr 70% 1fr;
+grid-template-rows:1fr;
+}
+
+
+
+.modal{
+  display:none;
+  position: fixed;
+  z-index:5;
+  left: 0;
+  top:0;
+  height: 100%;
+  width:100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  
+}
+
+.modal-content{
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color:#f4f4f4;
+  margin:0;
+  width: 100%;
+  height:100%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:1s;
+}
+
+.modal-header h2, .modal-footer h3{
+  margin:0;
+}
+
+.modal-header{
+  background:white;
+  padding:15px;
+  color:black;
+  padding-top: 0;
+}
+
+.modal-body p{
+  	margin-bottom:10px;
+    color: #6f6f6e;
+}
+
+#noentry{
+	display:none;
+}
+
+#acceptBtn{
+    font-weight:bold;
+}
+
+
+#acceptBtn:hover{
+        color: white!important;
+}
+
+
+#boldfont{
+    margin:0;
+        font-family: "Knockout 68 A", "Knockout 68 B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:50px;
+}
+
+.modal-body{
+  padding:10px 90px;
+     top: -20px;
+}
+
+.closeBtn {
+    display:block;
+     width: 22px;
+    padding-top: 30px;
+    width: 22px;
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    
+    background-size: 90%;
+    margin-right: 16px;
+}
+
+.closeBtn:hover{
+     width: 24px;
+    margin-right: 15px;
+    padding-top: 29px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+#acceptBtn:hover,#acceptBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+    
+    
+#acceptBtn{
+   
+    display: block;
+    align-content: center;
+    margin: auto;
+    text-align: center;
+    width: 140px;
+    border-style: solid;
+    height: 48px;
+    padding-top: 11px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+
+    
+    
+}
+#cookieMonster {
+    float: left;
+    display: block;
+    margin: auto;
+    width: 400px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+ 
+}
+
+#script_size{
+font-size:90px;    
+    
+}
+
+@keyframes modalopen{
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+
+p div .modal-body{
+        
+}
+
+.modal-body span{
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .modal-content{
+            width: 260px;
+    }
+    
+    #cookieMonster{
+        padding-top:10px;
+          width: 200px;
+            padding-bottom: 10px;
+    }
+    
+    .closeBtn {
+        width:20px;}
+    #boldfont {
+        font-size:40px;
+    }
+    
+    #script_size {
+    font-size: 60px;
+}
+    
+    .modal-body {
+    padding: 10px 5px;
+}
+    
+    #acceptBtn{
+          margin-top:10px;
+        margin:auto;
+}
+    .modal-body{
+      
+        padding-bottom:0;
+        
+        
+    }
+    
+    div#acceptBtn.btn.dark{
+        margin-top: 30px;
+    }
+    
+    
+    .modal-body p{
+       
+    margin-bottom:0;
+    }
+    
+    .modal-content{
+        margin:5% auto;
+    }
+        
+}
+
+
+
+body{
+  background-color: black;
+}

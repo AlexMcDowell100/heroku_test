@@ -1,0 +1,2 @@
+module GinloversHelper
+end
