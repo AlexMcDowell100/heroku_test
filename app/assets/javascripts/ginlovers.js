@@ -24,7 +24,7 @@ $("#circle").hover(function(){
         $("#play_button").hide(); //Hide tooltip
     })
 
-$("nav").click(function() {
+$("#video2").click(function() {
   $('.transform').toggleClass('transform-active');
   $('.hide').toggleClass('hide-active');
   $('.hidden').toggleClass('not-hidden');
