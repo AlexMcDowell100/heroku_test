@@ -11,56 +11,57 @@
     })
 });*/
 $(document).ready(function() {
-$(document).mousemove(function(e){
-    $("#play_button").stop().animate({left:e.pageX-40, top:e.pageY-40});
+  $(document).mousemove(function(e) {
+    $("#play_button").stop().animate({
+      left: e.pageX - 40,
+      top: e.pageY - 40
+    });
     console.log('loaded');
-});
+  });
 
-$("#circle").hover(function(){
+  $("#circle").hover(function() {
 
-         
+
     $("#play_button").show(); //Show tooltip
-    }, function() {
-        $("#play_button").hide(); //Hide tooltip
-    })
+  }, function() {
+    $("#play_button").hide(); //Hide tooltip
+  })
 
-$("#video2").click(function() {
-  $('.transform').toggleClass('transform-active');
-  $('.hide').toggleClass('hide-active');
-  $('.hidden').toggleClass('not-hidden');
+  $("#video2").click(function() {
+    $('.transform').toggleClass('transform-active');
+    $('.hide').toggleClass('hide-active');
+    $('.hidden').toggleClass('not-hidden');
+    setTimeout(function() {
+      $('#box').html('<iframe class="grid-video grid-video--hide" src="https://www.youtube.com/embed/g3Ed4SXiqzs?rel=0&autoplay=1&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+    }, 1000);
+
+    setTimeout(function() {
+      $('.grid-video').removeClass('grid-video--hide');
+    }, 1000);
+
+  });
+
+  $("#close").click(function() {
+    $('.transform').removeClass('transform-active');
+    $('.hide').removeClass('hide-active');
+    $('.hidden').removeClass('not-hidden');
+    $('.grid-video').remove();
+  });
 
 });
 
-$("#close").click(function() {
-     $('.transform').removeClass('transform-active');
-     $('.hide').removeClass('hide-active');
-     $('.hidden').removeClass('not-hidden');
-
-});
-
-});
 
 
-var vid = document.getElementById("myVideo"); 
 
-function playVid() { 
-    vid.play(); 
-} 
-
-function pauseVid() { 
-    vid.pause(); 
-}
-
-document.onreadystatechange = function () {
+document.onreadystatechange = function() {
   var state = document.readyState
   if (state == 'interactive') {
-       document.getElementById('contents').style.visibility="hidden";
+    document.getElementById('contents').style.visibility = "hidden";
   } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-      },1000);
+    setTimeout(function() {
+      document.getElementById('interactive');
+      document.getElementById('load').style.visibility = "hidden";
+      document.getElementById('contents').style.visibility = "visible";
+    }, 1000);
   }
 }
-

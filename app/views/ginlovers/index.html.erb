@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	
-</head>
+  <head></head>
   <body>
-      <div id="load"></div>
-      <div id="contents">
-  
+    <div id="load"></div>
+    <div id="contents">
 
-<div><%= image_tag 'Xbutton.png', :class => "hidden", :id => "close" %></div>
+      <div><%= image_tag 'Xbutton.png', :class => "hidden", :id => "close" %></div>
 
-<iframe class="grid_video hide" src="https://www.youtube.com/embed/g3Ed4SXiqzs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- <iframe  class="grid_video hide" src="https://www.youtube.com/embed/g3Ed4SXiqzs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe> -->
 
-    <div class='box transform'></div>
-	     <div id='cover' class='transform'></div>
-          <section id='home'>
-            <div id='header'>
-            
-            <div class="header_container">
-              <div class='spacer'>
-              </div>
-             <div></div>
-                <%= image_tag 'GinUpLogo.png', :id => "logo" %>
-              
-              <div class='spacer'>
-              </div>
-            </div>
+      <div id="box" class='box transform'></div>
+    
+      <section id='home'>
+        <div id='header'>
+
+          <div class="header_container">
+            <div class='spacer'></div>
+            <div></div>
+            <%= image_tag 'GinUpLogo.png', :id => "logo" %>
+
+            <div class='spacer'></div>
+          </div>
+        </div>
+
+        <div id="welcome">
+          <p id="text">HELLO</p>
+        </div>
+        <div class="container">
+
+          <div id="video1">Video 1</div>
+
+          <div id="video2" class='transform'>Video2</div>
+          <div id="video3">
+            <p>
+              Video3</p>
           </div>
 
-          <div id="welcome">
-            <p id="text">HELLO</p>
-          </div>
-<div class="container">
+          <div id="video4">Video 4</div>
+          <div id="video5">Video 5</div>
 
-   <div id="video1">Video 1</div>
-  
-   <div id="video2" class='transform'>Video2</div>
-   <div id="video3">
-     <p> Video3</p>
-     </div>
- 
-     <div id="video4">Video 4</div>
-     <div id="video5">Video 5</div>
-
-  	</div>
-  </div>
-</section>
+        </div>
+      </div>
 
 
- 
+      <!-- Place <div> tag where you want the feed to appear -->
+<div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+<!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+<script type="text/javascript">
+/* curator-feed */
+(function(){
+var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+i.src = "https://cdn.curator.io/published/cd5636e5-7283-4de0-8482-20b287cff9f9.js";
+e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+})();
+</script>
+    </section>
 
-</body>
+  </body>
 </html>
-  
-
-
