@@ -16,7 +16,7 @@
 <div id="simpleModal" class="modal">
 <div class="modal-content">
 <div class="modal-header"><div id='noentry'>
-      <p> you are not old enough soz x</p>
+      <p> you are not old enough</p>
     </div></div>
     
     <div id="modal-body">
@@ -33,11 +33,12 @@
     
     <div id='container_nav'>
       <div>
-        <p> Menu </p>
+        <%= link_to "Forum", posts_path %>
       </div>
       <div>
       </div>
       <div>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if user_signed_in? %>
