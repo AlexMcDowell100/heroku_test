@@ -1,1 +1,36 @@
 @import 'base/includes';
+
+
+
+.new_menu{
+position:fixed;
+background-color:white;
+color: black;
+left:0;
+top:0;
+width:100vw;
+height:100vh;
+-webkit-transition: 0.5s ease-in;
+-moz-transition: 0.5s ease-in;
+-o-transition: 0.5s ease-in;
+transition: 0.5s ease-in;
+-webkit-transform: translate3d(-100%,0,0);
+-moz-transform: translate3d(-100%,0,0);
+-o-transform: translate3d(-100%,0,0);
+-ms-transform: translate3d(-100%,0,0);
+transform: translate3d(-100%,0,0);
+}
+
+
+.new_menu-active{
+   -webkit-transform: translate3d(0,0,0);
+   -moz-transform: translate3d(0,0,0);
+   -o-transform: translate3d(0,0,0);
+   -ms-transform: translate3d(0,0,0);
+   transform: translate3d(0,0,0);
+ }
+
+#menu_close{
+  margin:5px;
+
+}

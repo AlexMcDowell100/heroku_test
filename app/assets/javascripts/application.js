@@ -16,18 +16,26 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require_tree 
+//= require_tree
 
 
+$("#menu").click(function() {
+  $('.new_menu').toggleClass('new_menu-active');
+});
 
+$(document).ready(function() {
 
+$("#menu_close").click(function() {
+  $('.new_menu').removeClass('new_menu-active');
+});
+});
 
 window.onload=function(){
 
     getCookie();
     doSomething();
 }
-    
+
 function getCookie(name) {
     var dc = document.cookie;
     var prefix = name + "=";
@@ -47,7 +55,7 @@ function getCookie(name) {
     // because unescape has been deprecated, replaced with decodeURI
     //return unescape(dc.substring(begin + prefix.length, end));
     return decodeURI(dc.substring(begin + prefix.length, end));
-} 
+}
 
 function doSomething() {
     var myCookie = getCookie('SouthpawCookie');
@@ -58,7 +66,7 @@ function doSomething() {
     }
     else {
         console.log('you have a cookie');
-        
+
         var x = getCookieValue('SouthpawCookie');
         if(x == 'accept'){
             console.log('you have an accept cookie');
@@ -66,10 +74,10 @@ function doSomething() {
         else{
             gaOptout();
         console.log('you have a reject cookie');
-    	}
-        
-    
-	}  
+      }
+
+
+  }
 }
 
 
@@ -89,13 +97,13 @@ function getCookieValue(c_name) {
     return "";
 }
 
-        
- function modal_appear(){  
+
+ function modal_appear(){
      var modal = document.getElementById('simpleModal');
      /*var closeBtn = document.getElementsByClassName('closeBtn')[0];*/
      var acceptBtn = document.getElementById('acceptBtn');
 
-/*closeBtn.addEventListener('click', closeModal);*/   
+/*closeBtn.addEventListener('click', closeModal);*/
 acceptBtn.addEventListener('click', acceptTerms);
      modal.style.display = 'block';
  }
@@ -106,7 +114,7 @@ acceptBtn.addEventListener('click', acceptTerms);
     //document.cookie="Southpaw=reject";
     gaOptout();
 }*/
-    
+
 
 /*function setcookie(cookieName,cookieValue) {
     var today = new Date();
@@ -114,7 +122,7 @@ acceptBtn.addEventListener('click', acceptTerms);
     expire.setTime(today.getTime() + 3600000*24*14);
     document.cookie = cookieName+"="+escape(cookieValue) + ";expires="+expire.toGMTString();
 }*/
-    
+
 
  function setcookie(variable, value, expires_seconds) {
     var d = new Date();
@@ -128,7 +136,7 @@ acceptBtn.addEventListener('click', acceptTerms);
 /*function setcookie(c_name,c_value,exdays) {
    var exdate=new Date();
    exdate.setDate(exdate.getDate() + exdays);
-   document.cookie=encodeURIComponent(c_name) 
+   document.cookie=encodeURIComponent(c_name)
      + "=" + encodeURIComponent(c_value)
      + (!exdays ? "" : "; expires="+exdate.toUTCString());
      ;
@@ -145,32 +153,28 @@ function acceptTerms(){
     var birthDate = new Date(dateString);
     age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate()))
         age--;
 }
 
-    
-	if (age >= 18){
+
+  if (age >= 18){
     document.getElementById('simpleModal').style.display = 'none';
     setcookie('SouthpawCookie','accept',31536000);
 
 }
 else{
-	document.getElementById('modal-body').style.display = 'none';
-	document.getElementById('noentry').style.display = 'block';
+  document.getElementById('modal-body').style.display = 'none';
+  document.getElementById('noentry').style.display = 'block';
 
 }
-    
+
 
 }
-    
+
 
 
 // Opt-out function
 function gaOptout() {
     console.log('youve opted out');
 }
-
-
-
-

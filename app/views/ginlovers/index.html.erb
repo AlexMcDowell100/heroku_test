@@ -7,10 +7,10 @@
 
       <div><%= image_tag 'Xbutton.png', :class => "hidden", :id => "close" %></div>
 
-      <!-- <iframe  class="grid_video hide" src="https://www.youtube.com/embed/g3Ed4SXiqzs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe> -->
-
+      <!-- <iframe class="grid_video hide" src="https://www.youtube.com/embed/g3Ed4SXiqzs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe> -->
+      <div id="menu_background" class='menu_box m_transform'></div>
       <div id="box" class='box transform'></div>
-    
+
       <section id='home'>
         <div id='header'>
 
@@ -30,7 +30,7 @@
 
           <div id="video1">Video 1</div>
 
-          <div id="video2" class='transform'>Video2</div>
+          <div id="video2">Video2</div>
           <div id="video3">
             <p>
               Video3</p>
@@ -42,18 +42,25 @@
         </div>
       </div>
 
-
       <!-- Place <div> tag where you want the feed to appear -->
-<div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-<!-- The Javascript can be moved to the end of the html page before the </body> tag -->
-<script type="text/javascript">
-/* curator-feed */
-(function(){
-var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-i.src = "https://cdn.curator.io/published/cd5636e5-7283-4de0-8482-20b287cff9f9.js";
-e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-})();
-</script>
+      <div id="curator-feed">
+        <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+      </div>
+      <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+      <script type="text/javascript">
+        /* curator-feed */
+        (function () {
+          var i,
+            e,
+            d = document,
+            s = "script";
+          i = d.createElement("script");
+          i.async = 1;
+          i.src = "https://cdn.curator.io/published/cd5636e5-7283-4de0-8482-20b287cff9f9.js";
+          e = d.getElementsByTagName(s)[0];
+          e.parentNode.insertBefore(i, e);
+        })();
+      </script>
     </section>
 
   </body>

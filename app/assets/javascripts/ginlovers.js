@@ -10,6 +10,9 @@
         $(this).fadeIn('fast',0.5);
     })
 });*/
+
+
+
 $(document).ready(function() {
   $(document).mousemove(function(e) {
     $("#play_button").stop().animate({
@@ -18,6 +21,11 @@ $(document).ready(function() {
     });
     console.log('loaded');
   });
+
+  $("#menu").click(function() {
+    $('.new_menu').toggleClass('new_menu-active');
+  });
+
 
   $("#circle").hover(function() {
 

@@ -11,41 +11,46 @@
   </head>
 
   <body>
+<div class="new_menu">
+<div id="menu_close">Menu</div>
 
+
+
+</div>
 
 <div id="simpleModal" class="modal">
 <div class="modal-content">
 <div class="modal-header"><div id='noentry'>
       <p> you are not old enough</p>
     </div></div>
-    
+
     <div id="modal-body">
-    
+
       <form>
       Date Of Birth <input type="text" id="DOB" /></br>
       </form>
       <div id="acceptBtn" class="btn dark">Submit</div>
       </div>
       </div>
-      
+
         </div>
     </div>
-    
+
     <div id='container_nav'>
+      <div id='menu'>Menu</div>
       <div>
-        <%= link_to "Forum", posts_path %>
+
       </div>
-      <div>
-      </div>
+
       <div>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <% else %>
  <%= link_to "Sign up", new_user_registration_path %>
-  <%= link_to('Login', new_user_session_path)  %>  
+  <%= link_to('Login', new_user_session_path)  %>
 <% end %>
 </div>
 
