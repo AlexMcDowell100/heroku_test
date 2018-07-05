@@ -62,6 +62,7 @@ config.serve_static_assets = true
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
+config.assets.precompile += ['static_pages.css']
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
