@@ -82,3 +82,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 group :development, :test do
 gem 'foreman'
 end
+
+group :production, :staging do
+      gem 'rails_12factor'
+    end
