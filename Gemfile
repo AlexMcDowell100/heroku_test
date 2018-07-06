@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+    end
+
 ruby '2.5.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
@@ -59,10 +64,7 @@ group :development do
   gem 'sqlite3'
 end
 
-group :production, :staging do
-      gem 'pg'
-      gem 'rails_12factor'
-    end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
@@ -82,7 +84,3 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 group :development, :test do
 gem 'foreman'
 end
-
-group :production, :staging do
-      gem 'rails_12factor'
-    end
